@@ -1,0 +1,10 @@
+name: Issue resolving
+on:
+  issues:
+    types: [opened]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List event details
+        run: echo "${{   toJSON(github)  }}"
